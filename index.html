@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-white shadow fixed w-full z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Portofolio</h1>
+
+      <!-- Hamburger button -->
+      <button id="menu-btn" class="md:hidden block focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="space-x-6 hidden md:block">
+        <a href="#home" class="hover:text-blue-500">Home</a>
+        <a href="#about" class="hover:text-blue-500">Tentang</a>
+        <a href="#projects" class="hover:text-blue-500">Projek</a>
+        <a href="#contact" class="hover:text-blue-500">Kontak</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4 shadow">
+      <a href="#home" class="block py-2 hover:text-blue-600">Home</a>
+      <a href="#about" class="block py-2 hover:text-blue-600">Tentang</a>
+      <a href="#projects" class="block py-2 hover:text-blue-600">Projek</a>
+      <a href="#contact" class="block py-2 hover:text-blue-600">Kontak</a>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+    <div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Hai, Saya <span class="text-blue-600">Steven Silaban</span></h2>
+      <p class="text-lg md:text-xl mb-6">Web Developer yang fokus pada Frontend & Backend.</p>
+      <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Lihat Projek</a>
+    </div>
+  </section>
+
+<!-- About Section -->
+<section id="about" class="max-w-5xl mx-auto py-10 px-5">
+  <div class="flex flex-row items-start gap-10">
+
+    <!-- Teks di kiri -->
+    <div class="md:w-1/2 text-center md:text-left">
+      <h2 class="text-3xl font-bold mb-5">Tentang Saya</h2>
+      <p class="text-lg leading-relaxed">
+        Saya seorang developer yang berpengalaman dalam membangun website modern
+        menggunakan HTML, CSS, JavaScript, TailwindCSS, dan backend seperti PHP atau Python.
+      </p>
+    </div>
+
+    <!-- Gambar di kanan -->
+    <div class="md:w-1/2 flex justify-center">
+      <img src="gambar.png" alt="Character"
+           class="w-72 md:w-80 object-contain shadow-2xl rounded-2xl">
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-10 text-center">Projek</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card -->
+        <div class="bg-white shadow rounded-xl p-4">
+          <img src="https://via.placeholder.com/300" class="rounded-md mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Project 1</h4>
+          <p class="text-gray-700 text-sm mb-4">Deskripsi singkat project.</p>
+          <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+        </div>
+
+        <div class="bg-white shadow rounded-xl p-4">
+          <img src="https://via.placeholder.com/300" class="rounded-md mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Project 2</h4>
+          <p class="text-gray-700 text-sm mb-4">Deskripsi singkat project.</p>
+          <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+        </div>
+
+        <div class="bg-white shadow rounded-xl p-4">
+          <img src="https://via.placeholder.com/300" class="rounded-md mb-4" />
+          <h4 class="text-xl font-semibold mb-2">Project 3</h4>
+          <p class="text-gray-700 text-sm mb-4">Deskripsi singkat project.</p>
+          <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">Kontak</h3>
+      <p class="mb-4">Silakan hubungi saya melalui email di bawah ini:</p>
+      <a href="mailto:email@example.com" class="text-blue-600 text-lg underline">Tanpasauce@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-600">
+    © 2025 Steven Silaban. All Rights Reserved.
+  </footer>
+</body>
+</html>
